@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Railway Form</title>
+</head>
+<body>
+    <h1 align="center">Indian Railway Reservation System</h1>
+    <form>
+         <table align="center" cellpadding="5px" cellspacing="5px">
+            <tr>
+                <td><label>Name:</label></td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td><label>Contact:</label></td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td><label>Email:</label></td>
+                <td><input type="mail"></td>
+                
+            </tr>
+            <tr>
+                <td><label>Arrival Location:</label></td>
+                <td>
+                    <input type="text" list="arrival">
+                    <datalist id="arrival">
+                        <option>Lucknow</option>
+                        <option>Banaras</option>
+                        <option>Delhi</option>
+                        <option>Mumbai</option>
+                    </datalist>
+                </td>
+            </tr>
+            <tr>
+                <td><label>Destination Location:</label></td>
+                <td>
+                    <input type="text" list="destination">
+                    <datalist id="destination">
+                        <option>Lucknow</option>
+                        <option>Banaras</option>
+                        <option>Delhi</option>
+                        <option>Mumbai</option>
+                    </datalist>
+                </td>
+            </tr>
+            <tr>
+                <td><label>Date and time of Journey:</label></td>
+                <td><input type="datetime-local"></td>
+            </tr>
+            <tr>
+                <td><label>Gender:</label></td>
+                <td><input type="radio"  name="gender" checked>Male
+                <input type="radio"  name="gender">Female</td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Class:</label>
+                </td>
+                <td> 
+                    <select>
+                        <option value="select">--select--</option>
+                        <option value="1AC">1AC</option>
+                        <option value="2AC">2AC</option>
+                        <option value="3AC">3AC</option>
+                        <option value="sleeper">sleeper</option>
+                        <option value="chair">chair</option>
+                    </select>
+                </td>
+            </tr>
+         </table><br><br>
+        <center> <button>submit</button></center>
+    </form>
+
+
+</body>
+</html>
