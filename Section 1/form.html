@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+</head>
+<body>
+
+    <h1>Student Registration Form</h1>
+
+    <form>
+        <label>Full Name:</label>
+        <input type="text"><br><br>
+
+        <label>Gender:</label>
+        <input type="radio" name="gender" checked> Male
+        <input type="radio" name="gender"> Female
+        <br><br>
+
+        <label>DOB:</label>
+        <input type="date">
+        <br><br>
+
+        <label>State:</label>
+        <select>
+            <option>---select---</option>
+            <option>UTTAR PRADESH</option>
+            <option>Delhi</option>
+            <option>Bihar</option>
+            <option>MADHYA PRADESH</option>
+            <option>UTTRAKHAND</option>
+        </select>
+        <br><br>
+
+        <label>Intermediate Board:</label>
+        <input type="text" list="board">
+        <datalist id="board">
+            <option>ISC</option>
+            <option>CBSE</option>
+            <option>UP</option>
+            <option>UK</option>
+        </datalist>
+        <br><br>
+
+        <details>
+            <summary>Terms & Conditions</summary>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, ut consectetur nihil nam laboriosam dolorum amet qui sit dignissimos nesciunt voluptatibus doloremque harum alias vero quam earum tempore accusantium praesentium facere hic? Aliquid assumenda earum at, quaerat unde velit animi reprehenderit praesentium. Quas, vitae possimus veritatis perspiciatis minus necessitatibus architecto?</p>
+        </details>
+        <br>
+
+        <button>Submit</button>
+    </form>
+    
+</body>
+</html>
