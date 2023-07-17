@@ -1,17 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Registration Form</title>
 </head>
+
 <body>
 
     <h1>Student Registration Form</h1>
 
     <form>
         <label>Full Name:</label>
-        <input type="text"><br><br>
+        <input type="text" required minlength="5"><br><br>
+
+        <label>Password:</label>
+        <input type="password" required minlength="5"><br><br>
+
+        <label>Email:</label>
+        <input type="email" required><br><br>
 
         <label>Gender:</label>
         <input type="radio" name="gender" checked> Male
@@ -43,14 +51,25 @@
         </datalist>
         <br><br>
 
+        <label for="image">Upload PassportSize Photo</label>
+        <input id="image" type="file" hidden><br><br>
+
         <details>
             <summary>Terms & Conditions</summary>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, ut consectetur nihil nam laboriosam dolorum amet qui sit dignissimos nesciunt voluptatibus doloremque harum alias vero quam earum tempore accusantium praesentium facere hic? Aliquid assumenda earum at, quaerat unde velit animi reprehenderit praesentium. Quas, vitae possimus veritatis perspiciatis minus necessitatibus architecto?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <mark>Nobis, ut consectetur nihil</mark> nam
+                laboriosam dolorum amet qui sit dignissimos nesciunt voluptatibus doloremque harum alias vero quam earum
+                tempore accusantium praesentium facere hic? Aliquid assumenda earum at, quaerat unde velit animi
+                reprehenderit praesentium. Quas, vitae possimus veritatis perspiciatis minus necessitatibus architecto?
+            </p>
         </details>
         <br>
 
+        <input type="checkbox" required>
+        <label for="">I Accept Terms & Conditions</label><br><br>
+
         <button>Submit</button>
     </form>
-    
+
 </body>
+
 </html>
