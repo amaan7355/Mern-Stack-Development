@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Ticket Booking</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <marquee class="heading" behavior="alternate"><h1>Movie Ticket Booking System</h1></marquee>
+
+    <h2>Recommended Movies.</h2>
+   
+    <form class="myform"> 
+        <table cellspacing="10px">
+            <tr>
+                <td>
+                    <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:oi-discovery-catalog@@icons@@star-icon-202203010609.png,ox-24,oy-615,ow-29:ote-OS4yLzEwICA0Ny43SyBWb3Rlcw%3D%3D,ots-29,otc-FFFFFF,oy-612,ox-70:q-80/et00329481-bcufavugyg-portrait.jpg" height="300px" width="300px" alt="">
+                </td>
+                <td>
+                    <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:oi-discovery-catalog@@icons@@like_202006280402.png,ox-24,oy-617,ow-29:ote-MzI0SyBMaWtlcw%3D%3D,ots-29,otc-FFFFFF,oy-612,ox-70:q-80/et00347867-ysxlbmwnbz-portrait.jpg" height="300px" width="300px" alt="">
+                </td>
+                <td>
+                    <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:oi-discovery-catalog@@icons@@star-icon-202203010609.png,ox-24,oy-615,ow-29:ote-OC41LzEwICAzMS41SyBWb3Rlcw%3D%3D,ots-29,otc-FFFFFF,oy-612,ox-70:q-80/et00047401-srgvjbrqng-portrait.jpg" height="300px" width="300px" alt="">
+                </td>
+                <td>
+                    <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:oi-discovery-catalog@@icons@@star-icon-202203010609.png,ox-24,oy-615,ow-29:ote-OS4zLzEwICA0OC45SyBWb3Rlcw%3D%3D,ots-29,otc-FFFFFF,oy-612,ox-70:q-80/et00347275-lfkejvjxvf-portrait.jpg" height="300px" width="300px" alt="">
+                </td>
+            </tr>
+            <tr>
+                <td><h3><input type="radio" name="movie">Mission Impossible: Dead Reckoning - Part One</h3></td>
+                <td><h3 align="center"><input type="radio" name="movie">Oppenheimer</h3></td>
+                <td><h3 align="center"><input type="radio" name="movie">The Flash</h3></td>
+                <td><h3><input type="radio" name="movie">Spider-Man: Across The Spider-Verse</h3></td>
+            </tr>
+
+        </table>
+         <table align="center" cellpadding="8px" cellspacing="8px">
+            <tr>
+                <td><label class="mylabel">Name :</label></td>
+                <td><input type="text" placeholder="Your Name"></td>
+            </tr>
+            <tr>
+                <td><label class="mylabel">Contact :</label></td>
+                <td><input type="text" placeholder="Your Contact"></td>
+            </tr>
+            <tr>
+                <td><label class="mylabel">Select Language :</label></td>
+                <td><input type="radio" name="language"><p class="mylabel">English</p></td>
+                <td><input type="radio" name="language"><p class="mylabel">Hindi</p></td>
+                
+            </tr>
+            <tr>
+                <td><label class="mylabel">Select Format :</label></td>
+                <td>
+                    <select>
+                        <option>--select--</option>
+                        <option>2D</option>
+                        <option>4DX</option>
+                        <option>ICE</option>
+                        <option>IMAX2D</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label class="mylabel">No.of Seats :</label></td>
+                <td>
+                    <input type="text" list="destination" placeholder="How many seats?">
+                    <datalist id="destination">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </datalist>
+                </td>
+            </tr>
+            <tr>
+                <td><label class="mylabel">Date & Time of Show :</label></td>
+                <td><input type="datetime-local"></td>
+            </tr>
+            <tr>
+                <td>
+                    <label class="mylabel">Class :</label>
+                </td>
+                <td> 
+                    <select>
+                        <option value="select">--select--</option>
+                        <option value="balcony">Balcony</option>
+                        <option value="middle">Middle</option>
+                        <option value="rear">Rear</option>
+
+                    </select>
+                </td>
+            </tr>
+         </table><br>
+        <details align="center">
+            <summary>Terms & Conditions</summary>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <mark>Nobis, ut consectetur nihil</mark> nam
+                laboriosam dolorum amet qui sit dignissimos nesciunt voluptatibus doloremque harum alias vero quam earum
+                tempore accusantium praesentium facere hic? Aliquid assumenda earum at, quaerat unde velit animi
+                reprehenderit praesentium. Quas, vitae possimus veritatis perspiciatis minus necessitatibus architecto?
+            </p>
+        </details><br>
+        <center> <button>Book Show</button></center>
+    </form>
+    <footer>
+
+    </footer>
+
+
+</body>
+</html>
