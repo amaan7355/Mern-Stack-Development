@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <script src="https://kit.fontawesome.com/0cc901fe94.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic" rel="stylesheet" />
+    <style>
+        body{
+            background-color: lightgray;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Montserrat;
+        }
+        .mycard{
+            display: flex;
+            width: 70%;
+            /* border-radius: 10px; */
+            /* box-shadow: 3px 3px 10px 2px #00000093; */
+        }
+        .cardinfo{
+            /* border: 1px solid; */
+            width: 40%;
+            padding: 30px;
+            background-color: #6527BE;
+            color: white;
+        }
+        .formcontainer{
+            background-color: white;
+            /* border: 1px solid; */
+            width: 60%;
+            padding: 30px;
+        }
+        /* .company{
+            width: 100%;
+        } */
+        .icon{
+            margin-left: 20px;
+        }
+        .icon:hover{
+            background-color: black;
+        }
+        .input{
+            width: 70%;
+        }
+        h3{
+        margin-top: 12px;
+        margin-bottom: 10px;
+        }
+        .mybtn{
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            background-color:  #6527BE;
+            color: white;
+            border: none;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        .mybtn:hover{
+            background-color: #8a4fdc;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="mycard">
+        <div class="cardinfo">
+            <h2>Get in touch</h2>
+            <h4><i class="fa-solid fa-location-dot"></i> Visit us</h4>
+            <p>Come say hello at our office HQ. 67 Victoria Way Croydon South.</p>
+            <h4><i class="fa-solid fa-message"></i> Chat to us</h4>
+            <p>Our Friendly team is here to help. hello@paysphere.com</p>
+            <h4><i class="fa-solid fa-phone"></i> Call us</h4>
+           <p> Mon-Fri from 8am to 5pm... (+995)555-55-55-55</p>
+           <h4>Social Media</h4>
+           <i class="fa-brands fa-facebook fa-lg icon"></i>
+           <i class="fa-brands fa-instagram fa-lg icon"></i>
+           <i class="fa-brands fa-youtube fa-lg icon"></i>
+           <i class="fa-brands fa-linkedin fa-lg icon"></i>
+           <i class="fa-brands fa-twitter fa-lg icon"></i>
+        </div>
+        <div class="formcontainer">
+            <label><h3>Full Name</h3></label>
+            <input type="text" class="input" placeholder="Your Name">
+            <label for=""><h3>Company Name</h3></label>
+            <input type="text" class="input" placeholder="Your Company Name">
+            <label for=""><h3>Email</h3></label>
+            <input type="email" class="input" placeholder="Your Email">
+            <label for=""><h3>Phone No.</h3></label>
+            <input type="text" class="input" placeholder="Your Phone No.">
+            <label for=""><h3>Message</h3></label>
+            <textarea name="" class="input" cols="10" rows="4" placeholder="Tell us what we can help you with"></textarea><br>
+            <p><input type="checkbox"> I'd like to receive more information about company.I understand and agree to the <mark>Privacy Policy</mark></p>
+            <button type="button" class="mybtn">Submit</button>
+        </div>
+    </div>
+    
+</body>
+</html>
