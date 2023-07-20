@@ -40,12 +40,12 @@
         .icon{
             margin-left: 20px;
         }
-        .icon:hover{
+        /* .icon:hover{
             background-color: black;
-        }
+        } */
         .input{
             width: 100%;
-            padding: 5px;
+            padding: 10px;
             box-sizing: border-box;
             border-radius: 5px;
             border: 1px solid black;
@@ -69,12 +69,18 @@
         .mybtn:hover{
             background-color: #8a4fdc;
         }
+        .logo{
+            width: 150px;
+            margin: auto;
+            display: block;
+        }
     </style>
 </head>
 <body>
 
     <div class="mycard">
         <div class="cardinfo">
+            <img src="logo1.png" class="logo" alt="">
             <h2>Get in touch</h2>
             <h4><i class="fa-solid fa-location-dot"></i> Visit us</h4>
             <p>Come say hello at our office HQ. 67 Victoria Way Croydon South.</p>
@@ -92,8 +98,8 @@
         <div class="formcontainer">
             <label><h3>Full Name</h3></label>
             <input type="text" class="input" placeholder="Your Name">
-            <label for=""><h3>Company Name</h3></label>
-            <input type="text" class="input" placeholder="Your Company Name">
+            <!-- <label for=""><h3>Company Name</h3></label>
+            <input type="text" class="input" placeholder="Your Company Name"> -->
             <label for=""><h3>Email</h3></label>
             <input type="email" class="input" placeholder="Your Email">
             <label for=""><h3>Phone No.</h3></label>
@@ -101,7 +107,7 @@
             <label for=""><h3>Message</h3></label>
             <textarea name="" class="input" cols="10" rows="4" placeholder="Tell us what we can help you with"></textarea><br>
             <p><input type="checkbox"> I'd like to receive more information about company.I understand and agree to the <mark>Privacy Policy</mark></p>
-            <button type="button" class="mybtn">Submit</button>
+            <button class="mybtn">Submit</button>
         </div>
     </div>
     
