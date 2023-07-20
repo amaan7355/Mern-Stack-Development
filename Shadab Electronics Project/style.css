@@ -1,0 +1,299 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+#title {
+  background-color: #425F57;
+  margin-bottom: 0;
+}
+
+#products {
+  background-color: ;
+  margin-top: 0;
+}
+
+.tb {
+  margin: 0;
+}
+
+.padding-bottom {
+  padding-bottom: 3rem;
+}
+
+.home {
+  height: 20rem;
+  background-color: #9EB23B;
+  color: white;
+}
+
+.products {
+  height: 4rem;
+  width: auto;
+  background-color: #EEEEEE;
+  color: black;
+}
+
+p {
+  font-size: 120%;
+}
+
+.h1-heading {
+  text-align: center;
+  font-size: 2rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+h2 {
+  text-decoration: underline;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+h3 {
+  text-align: center;
+}
+
+h5 {
+  text-align: center;
+  color: #40514E;
+}
+
+.features-para {
+  color: #73777B;
+  text-align: center;
+}
+
+.features {
+  text-align: center;
+  padding: 7% 15%;
+  line-height: 1.5;
+}
+
+.features-img {
+  margin-bottom: 1rem;
+}
+
+.button-icon {
+  margin-right: 0.5rem;
+}
+
+.ruler {
+  border: dotted 5px;
+  border-bottom: none;
+  width: 40px;
+  margin: 50px auto;
+  color: black;
+}
+
+.space {
+  margin-left: 2em;
+}
+
+.strong {
+  font-weight: bold;
+}
+
+.center {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.tv {
+  background-color: #EEEEEE;
+}
+
+.margin {
+  margin-right: 40%;
+}
+
+.size {
+  height: 50%;
+  width: 50%;
+}
+
+.margin {
+  text-align: left;
+}
+
+.footer-link {
+  padding: 15px;
+}
+
+.bottom-container {
+  background-color: #425F57;
+  height: 12rem;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+.last {
+  color: white;
+  font-size: 1em;
+  margin-bottom: 1rem;
+}
+
+.a {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  color: black;
+}
+
+.visit-btn {
+  text-decoration: none;
+  color: black;
+}
+
+.intro2 {
+  width: 30%;
+  margin: auto;
+  line-height: 2;
+}
+
+.brand-logo {
+  width: 60%;
+  margin-left: 3rem;
+}
+
+.button {
+  background: #34d9d9;
+  background-image: -webkit-linear-gradient(top, #0d6efd, #0d6efd);
+  background-image: -moz-linear-gradient(top, #0d6efd, #0d6efd);
+  background-image: -ms-linear-gradient(top, #0d6efd, #0d6efd);
+  background-image: -o-linear-gradient(top, #0d6efd, #0d6efd);
+  background-image: linear-gradient(to bottom, #0d6efd, #0d6efd);
+  -webkit-border-radius: 13;
+  -moz-border-radius: 13;
+  border-radius: 12px;
+  font-family: Georgia;
+  color: #ffffff;
+  font-size: 18px;
+  padding: 8px 18px 8px 18px;
+  text-decoration: none;
+}
+
+.button:hover {
+  background: #1fc2b4;
+  background-image: -webkit-linear-gradient(top, #1fc2b4, #16b8b8);
+  background-image: -moz-linear-gradient(top, #1fc2b4, #16b8b8);
+  background-image: -ms-linear-gradient(top, #1fc2b4, #16b8b8);
+  background-image: -o-linear-gradient(top, #1fc2b4, #16b8b8);
+  background-image: linear-gradient(to bottom, #1fc2b4, #16b8b8);
+  text-decoration: none;
+}
+
+.main-heading {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5rem;
+  line-height: 1.5;
+  color: white;
+}
+
+.sub-heading {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+  line-height: 1;
+  color: white;
+}
+
+.container-fluid {
+  padding: 3% 15%;
+}
+
+.brand {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.heading {
+  width: 35%;
+  margin: auto;
+  text-align: center;
+}
+
+.heading>h1 {
+  color: mediumaquamarine;
+}
+
+.heading>p {
+  font-size: 14px;
+}
+
+#team-members,
+#cards {
+  height: auto;
+  width: 70%;
+  margin: auto;
+  display: flex;
+  margin-top: 40px;
+}
+
+#team-members>div {
+  height: 100%;
+  width: 23%;
+  margin: auto;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+#team-members>div>img {
+  width: 100%;
+  height: 72%;
+}
+
+#team-stats {
+  height: 150px;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  background-color: rgb(221, 221, 64);
+  margin-top: 50px;
+}
+
+#team-stats>div {
+  width: 18%;
+  height: 100%;
+  margin: auto;
+  text-align: center;
+  padding: 20px 0px 20px 0;
+}
+
+#cards>div {
+  width: 30%;
+  height: 100%;
+  border: 1x solid red;
+  text-align: center;
+}
+
+#cards>div>img {
+  height: 120px;
+  width: 150;
+}
+
+#cards2 {
+  height: auto;
+  width: 70%;
+  margin: auto;
+  display: flex;
+  margin-top: 40px;
+}
+
+#cards2>div>img {
+  height: 120px;
+  width: 150;
+}
+
+#cards2>div {
+  width: 30%;
+  height: 100%;
+  border: 1x solid red;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tv {
+  background-color: #FAF7F0;
+}
