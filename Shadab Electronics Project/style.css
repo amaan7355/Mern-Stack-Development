@@ -20,6 +20,10 @@ body {
   padding-bottom: 3rem;
 }
 
+.floatright{
+  float: right;
+}
+
 .home {
   height: 20rem;
   background-color: #9EB23B;
@@ -183,12 +187,21 @@ a:hover {
   background-image: linear-gradient(to bottom, #1fc2b4, #16b8b8);
   text-decoration: none;
 }
-
-.main-heading {
+ .main-heading {
   font-family: 'Montserrat', sans-serif;
   font-size: 2rem;
   line-height: 1.5;
   color: white;
+}
+
+.margin-right{
+  margin-right: 50px;
+}
+
+.btnalign{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .sub-heading {
