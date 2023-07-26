@@ -58,3 +58,4 @@ while(num>0){
     num = parseInt(num/10);
 }
 console.log(rev);
+console.log("---------");
