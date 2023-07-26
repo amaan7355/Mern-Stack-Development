@@ -11,3 +11,11 @@ for (let i of nums){
 }
 console.log('--------');
 
+for (let i of 'Hello'){
+    console.log(i);
+}console.log('--------');
+
+for (let i of nums.slice(0, 3)){
+    console.log(i ** 2);
+}
+
