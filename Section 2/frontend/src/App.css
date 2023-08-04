@@ -1,0 +1,9 @@
+.myclass{
+    color: crimson;
+    font-size: 30px;
+}
+.home-img{
+    background-image: url('/public/back_img.jpeg');
+    background-size: cover;
+    background-attachment: fixed;
+}
