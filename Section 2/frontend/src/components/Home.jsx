@@ -17,8 +17,8 @@ const Home = () => {
         <h1>{addnums(26375, 827)}</h1>
 
         <p className='myclass'>ClassName is used instead of class in jsx</p>
-        <img src="/logo192.png" alt="" />
-        <img src="{mylogo}" alt="" />
+        <img src="/logo192.png" alt="" /><br />
+        <img className='img1' src={mylogo} alt="" />
 
     </div>
   );

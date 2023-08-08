@@ -7,3 +7,20 @@
     background-size: cover;
     background-attachment: fixed;
 }
+
+.nav-item .active{
+    font-weight: bold;
+    border-bottom: 2px solid blueviolet;
+    color: blueviolet !important;
+}
+
+.img1{
+    display: block;
+    margin: auto;
+    width: 30%;
+    height: 20%;
+}
+
+.nav-center{
+    text-align: center;
+}
