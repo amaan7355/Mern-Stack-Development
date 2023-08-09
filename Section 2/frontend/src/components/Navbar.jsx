@@ -3,10 +3,10 @@ import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
     return (
-        <nav className="navbar navbar-expand-lg bg-body-tertiary">
+        <nav className="navbar navbar-expand-lg bg-body-territory">
             <div className="container-fluid">
                 <a className="navbar-brand" href="#">
-                    React Tutorial
+                    <h2>React</h2>
                 </a>
                 <button
                     className="navbar-toggler"
@@ -20,10 +20,10 @@ const Navbar = () => {
                     <span className="navbar-toggler-icon" />
                 </button>
                 <div className="collapse navbar-collapse" id="navbarNavDropdown">
-                    <ul className="navbar-nav mx-auto ">
+                    <ul className="navbar-nav mx-3 me-auto mb-2 mb-lg-0">
                         <li className="nav-item">
                             <NavLink className="nav-link" to="/">
-                                Home
+                               Home
                             </NavLink>
                         </li>
                         <li className="nav-item">
@@ -41,10 +41,15 @@ const Navbar = () => {
                                 Event Handling
                             </NavLink>
                         </li>
+                        <li className="nav-item">
+                            <NavLink className="nav-link" to="/state">
+                                State Management
+                            </NavLink>
+                        </li>
                     </ul>
                     <form class="d-flex" role="search">
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-                            <button class="btn btn-outline-success" type="submit">Search</button>
+                            <button class="btn btn-outline-primary" type="submit">Search</button>
                     </form>
                 </div>
             </div>

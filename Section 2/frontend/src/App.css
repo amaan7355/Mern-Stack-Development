@@ -24,3 +24,131 @@
 .nav-center{
     text-align: center;
 }
+
+.mycard1{
+    /* border: 2px solid red; */
+    width: 30%;
+    padding: 40px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    /* x-offset y-offset blur size color */
+    box-shadow: 3px 3px 10px 2px #00000086;
+    background-color: white;
+}
+
+.login-body{
+    /* background-color: linear-gradient(45deg, rgb(212, 92, 116),rgb(231, 231, 158), rgb(150, 150, 231)); */
+    background-image: linear-gradient(270deg, rgba(188, 236, 188, 0.297), rgba(163, 150, 150, 0.339), rgba(220, 20, 60, 0.062)), url("https://images6.alphacoders.com/114/1142152.jpg");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* background-color: rgb(236, 86, 116); */
+}
+
+.myinput{
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid black;
+    margin-bottom: 20px;
+    margin-top: 5px;
+}
+
+.mybtn{
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgb(226, 52, 118);
+    color: white;
+    border: none;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+.mybtn:hover{
+    background-color: crimson;
+}
+
+.mybtn:active{
+    outline: 3px solid black;
+}
+
+.form-title{
+    font-family: Montserrat;
+    font-size: 25px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* *{
+    font-family: Montserrat;
+} */
+.logo{
+    width: 120px;
+    margin: auto;
+    display: block;
+}
+
+.mybtn1 {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #6527BE;
+    color: white;
+    border: none;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.mybtn1:hover {
+    background-color: #8a4fdc;
+}
+
+.input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid black;
+    margin-bottom: 10px;
+    margin-top: 2px;
+}
+
+.formcontainer {
+    background-color: white;
+    /* border: 1px solid; */
+    width: 45%;
+    padding: 30px;
+    /* height: 80vh; */
+}
+
+.mycard {
+    display: flex;
+    width: 100%;
+    /* border-radius: 10px; */
+    /* box-shadow: 3px 3px 10px 2px #00000093; */
+}
+
+.form-body {
+    background: #B993D6;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #8CA6DB, #B993D6);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #8CA6DB, #B993D6);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Montserrat;
+    width: 100%;
+}
+
+.main-heading{
+    text-align: center;
+    font-weight: bold;
+}
