@@ -7,6 +7,7 @@ import Navbar from './components/Navbar';
 import Notfound from './components/Notfound';
 import EventHandling from './components/EventHandling';
 import StateManagement from './components/StateManagement';
+import Post from './components/Post';
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
           <Route element={<SignUp />} path='/signup' />
           <Route element={<EventHandling />} path='/event' />
           <Route element={<StateManagement />} path='/state' />
+          <Route element={<Post />} path='/post' />
           <Route element={<Notfound />} path='/*' />
         </Routes>
       </BrowserRouter>
