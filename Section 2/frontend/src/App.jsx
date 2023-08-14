@@ -3,11 +3,12 @@ import './App.css';
 import Home from './components/Home';
 import Login from './components/Login';
 import SignUp from './components/SignUp';
-import Navbar from './components/Navbar';
 import Notfound from './components/Notfound';
 import EventHandling from './components/EventHandling';
 import StateManagement from './components/StateManagement';
 import Post from './components/Post';
+import ToDo from './components/ToDo';
+import Navbar from './components/Navbar';
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
           <Route element={<EventHandling />} path='/event' />
           <Route element={<StateManagement />} path='/state' />
           <Route element={<Post />} path='/post' />
+          <Route element={<ToDo />} path='/todo' />
           <Route element={<Notfound />} path='/*' />
         </Routes>
       </BrowserRouter>
