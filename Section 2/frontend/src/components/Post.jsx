@@ -10,7 +10,7 @@ const Post = () => {
             <hr />
             <div className='card shadow' style={{ width: '40rem' }}>
                 <div style={{ marginLeft: '20px' }}>
-                    <button className="btn" style={{ width: "55%", marginTop: "1rem" }}>
+                    <button className="btn" style={{ width: "55%", marginTop: "1rem", border: '0' }}>
                         <img
                             src="https://img.freepik.com/premium-vector/round-facebook-logo-isolated-white-background_469489-897.jpg?w=2000"
                             alt=""
@@ -32,15 +32,15 @@ const Post = () => {
                         <button className='btn' style={{ width: '100%', border: "0"}}>
                             <div style={{ float: "left", padding: "10px"  }}>
                                 <font className='my-3' >{likes} Likes</font><br />
-                                <button className='btn btn-primary' onClick={() => { setLikes(likes + 1) }}><i class="fa-regular fa-thumbs-up fa-lg"></i><font className='mx-3'>Like</font></button>
+                                <button className='btn btn-primary my-2' onClick={() => { setLikes(likes + 1) }}><i class="fa-regular fa-thumbs-up fa-lg"></i><font className='mx-3'>Like</font></button>
                             </div>
                             <div style={{ float: "left", marginLeft: "20px", padding: "10px" }}>
                                 <font className='my-3'>{comments} Comments</font><br />
-                                <button className='btn btn-secondary' onClick={() => { setComment(comments + 1) }}><i class="fa-regular fa-comment fa-lg"></i><font className='mx-3'>comment</font></button>
+                                <button className='btn btn-secondary my-2' onClick={() => { setComment(comments + 1) }}><i class="fa-regular fa-comment fa-lg"></i><font className='mx-3'>comment</font></button>
                             </div>
                             <div style={{ float: "left", marginLeft: "20px", padding: "10px" }}>
                                 <font className='my-3'>shared by  {share}</font><br />
-                                <button className='btn btn-light' onClick={() => { setShare(share + 1) }}><i class="fa-solid fa-share fa-lg"></i><font className='mx-3'>share</font></button>
+                                <button className='btn btn-light my-2' onClick={() => { setShare(share + 1) }}><i class="fa-solid fa-share fa-lg"></i><font className='mx-3'>share</font></button>
                             </div>
                         </button>
                     </div>
