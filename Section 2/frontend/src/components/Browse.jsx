@@ -5,9 +5,9 @@ const Browse = () => {
     const [laptopData, setLaptopData] = useState(laptopList);
     const DisplayData = () => {
         return laptopData.map((laptop) => (
-            <div className='col-md-3'>
-                <div className='card'>
-                    <img className='card-img-top' src={laptop.image} alt="" />
+            <div className='col-md-6'>
+                <div className='card m-4'>
+                    <img className='card-img-top w-75 p-4' src={laptop.image} alt="" />
                     <div className='card-body'>
                         <h4>{laptop.brand}</h4>
                         <h3>{laptop.model}</h3>

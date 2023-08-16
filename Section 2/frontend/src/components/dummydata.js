@@ -16,23 +16,16 @@ const laptopList = [
     {
         id: 3654,
         brand: 'Lenovo',
-        model: 'Yoga',
+        model: 'Thinkpad L14',
         price: 58000,
-        image: 'https://p4-ofp.static.pub/fes/cms/2022/09/23/qbgg6xmzhina57on2bg3uecxvxs9qf509679.png'
+        image: 'https://m.media-amazon.com/images/I/51ofJRM3KwL._AC_UF894,1000_QL80_.jpg'
     },
     {
         id: 3654,
-        brand: 'HP',
-        model: 'Pavilion',
-        price: 60000,
-        image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqMIoR0qO7q_TG9E49ber6IPCpOY4fAySL4Q&usqp=CAU'
-    },
-    {
-        id: 3654,
-        brand: 'HP',
-        model: 'Pavilion',
-        price: 60000,
-        image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqMIoR0qO7q_TG9E49ber6IPCpOY4fAySL4Q&usqp=CAU'
+        brand: 'Acer',
+        model: 'Nitro 5',
+        price: 59000,
+        image: 'https://img2.gadgetsnow.com/gd/images/products/additional/large/G302468_View_1/computer-laptop/laptops/acer-nitro-5-laptop-intel-16gb-intel-coretm-i5-11400h-nvidia-geforce-rtx-3050-16gb-1tb-hdd-256gb-ssd-windows-10.jpg'
     }
 
 ];
