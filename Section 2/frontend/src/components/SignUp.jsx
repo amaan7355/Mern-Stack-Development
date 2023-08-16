@@ -1,8 +1,13 @@
 import { useFormik } from 'formik';
-import React from 'react'
+import React from 'react';
+import * as Yup from 'yup';
+
+const SignupSchema = Yup.object().shape({
+  name: Yup.string().min(5, 'min 5 characters req.').required('Name is required'),
+  email: Yup.string().email('Invalid email').required('Required'),
+});
 
 const SignUp = () => {
-
   // initialize the formik
   const signUpform = useFormik({
     initialValues: {
@@ -10,9 +15,15 @@ const SignUp = () => {
       email : '',
       password : ''
     },
-    onSubmit: (values) => {
+    onSubmit: (values, {setSubmitting}) => {
+      setSubmitting(true);
+      setTimeout(() => {
       console.log(values);
-    }
+      setSubmitting(false);
+    }, 3000)
+
+  },
+    validationSchema: SignupSchema,
 
     // send the data to the server
   });
@@ -23,16 +34,18 @@ const SignUp = () => {
           <form onSubmit={signUpform.handleSubmit}>
             <h2 className="main-heading">SignUp Here</h2>
             <label>
-              <h4>Full Name</h4>
+              <h4>Full Name<span style={{color: 'red'}}> <sup>*</sup></span></h4>
             </label>
+            <span style={{fontSize: "1em", color: 'red', marginLeft: 20 }}>{signUpform.touched.name && signUpform.errors.name}</span>
             <input type="text" name='name' className="input" placeholder="Your Name" onChange={signUpform.handleChange}  value={signUpform.values.name}/>
             <label htmlFor="">
-              <h4>Email</h4>
-            </label> 
+              <h4>Email <span style={{color: 'red'}}> <sup>*</sup></span></h4>
+            </label>
+            <span style={{fontSize: "1em", color: 'red', marginLeft: 20 }}>{signUpform.touched.email && signUpform.errors.email}</span> 
             <input type="email" name='email' className="input" placeholder="Your Email"
             onChange={signUpform.handleChange}  value={signUpform.values.email} />
             <label htmlFor="">
-              <h4>Password</h4>
+              <h4>Password <span style={{color: 'red'}}> <sup>*</sup></span></h4>
             </label>
             <input type="password" name='password' className="input" placeholder="Your Password" onChange={signUpform.handleChange}  value={signUpform.values.password} />
             <br />
@@ -41,7 +54,15 @@ const SignUp = () => {
               company. I understand and agree to the
               <mark>Privacy Policy</mark>
             </p>
-            <button className="mybtn1" type='submit'>SignUp</button>
+            <button disabled={signUpform.isSubmitting} className="mybtn1" type='submit'>
+              {
+                signUpform.isSubmitting ? (
+                  <>
+                  <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true" style={{marginRight: '10px'}}></span>Loading...
+                  </>
+                ): 'Submit'
+              }
+             </button>
           </form>
         </div>
       </div>

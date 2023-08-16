@@ -9,6 +9,7 @@ import StateManagement from './components/StateManagement';
 import Post from './components/Post';
 import ToDo from './components/ToDo';
 import Navbar from './components/Navbar';
+import Browse from './components/Browse';
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
           <Route element={<StateManagement />} path='/state' />
           <Route element={<Post />} path='/post' />
           <Route element={<ToDo />} path='/todo' />
+          <Route element={<Browse />} path='/laptop' />
           <Route element={<Notfound />} path='/*' />
         </Routes>
       </BrowserRouter>
