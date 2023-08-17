@@ -27,6 +27,20 @@ const laptopList = [
         price: 59000,
         image: 'https://img2.gadgetsnow.com/gd/images/products/additional/large/G302468_View_1/computer-laptop/laptops/acer-nitro-5-laptop-intel-16gb-intel-coretm-i5-11400h-nvidia-geforce-rtx-3050-16gb-1tb-hdd-256gb-ssd-windows-10.jpg'
     }
+    // {
+    //     id: 3654,
+    //     brand: 'Apple',
+    //     model: 'Macbook 5',
+    //     price: 59000,
+    //     image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjsUbDGNWV52dkXPa9uSJbIvfACPOW55eUZg&usqp=CAU'
+    // },
+    // {
+    //     id: 3654,
+    //     brand: 'Dell',
+    //     model: 'Nitro 5',
+    //     price: 59000,
+    //     image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYBm7NrjpFwU5ka5acN-vFWrr-aq3FATIiQQ&usqp=CAU'
+    // }
 
 ];
 

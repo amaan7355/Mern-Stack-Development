@@ -1,8 +1,10 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import laptopList from './dummydata';
 
 const Browse = () => {
     const [laptopData, setLaptopData] = useState(laptopList);
+    const brands = ['Asus', 'HP', 'Lenovo', 'Acer'];
+    const [selOptions, setSelOptions] = useState([]);
     const DisplayData = () => {
         return laptopData.map((laptop) => (
             <div className='col-md-6'>
@@ -17,13 +19,65 @@ const Browse = () => {
             </div>
         ))
     }
-  return (
-    <div className='container'>
-        <div className='row'>
-            {DisplayData()}
+    const searchLaptop = (e) => {
+        const search = e.target.value;
+        const result = laptopList.filter((laptop) => { return laptop.model.toLowerCase().includes(search.toLowerCase()) })
+        setLaptopData(result);
+    }
+    const filterBrand = (e) => {
+        if (e.target.value === '') return setLaptopData(laptopList)
+        const selBrand = e.target.value;
+        const result = laptopList.filter((laptop) => { return laptop.brand === selBrand });
+        setLaptopData(result);
+    }
+    const selectOptions = (brand) => {
+        if(selOptions.includes(brand)){
+            setSelOptions(selOptions.filter((b) => b !== brand ));
+        }else{
+            setSelOptions([...selOptions, brand]);
+        }
+    }
+    useEffect(() => {
+        if(selOptions.length === 0) return setLaptopData(laptopList);
+        setLaptopData(laptopList.filter((laptop) => {
+            return selOptions.includes(laptop.brand);
+        }))
+    }, [selOptions ]);
+    return (
+        <div>
+            <header className='bg-dark text-white'>
+                <div className='container py-5'>
+                    <h1 className='text-center'>
+                        Browse Products
+                    </h1>
+                    <input type=" text" className='form-control' onChange={searchLaptop} />
+                    <div className='row mt-4'>
+                        <div className='col-md-4'>
+                            <select className='form-control' onChange={filterBrand}>
+                                <option value="">Select brand</option>
+                                {
+                                    brands.map((b) => (
+                                        <option value={b}>{b}</option>
+                                    ))
+                                }
+                            </select>
+                        </div>
+                        <div className='col-md-4 my-auto'>
+                            <input checked={selOptions.includes('HP')} onClick={() => {selectOptions('HP')}} type="checkbox" className='form-check-input' /> HP&nbsp;&nbsp;&nbsp;
+                            <input checked={selOptions.includes('Asus')} onClick={() => {selectOptions('Asus')}} type="checkbox" className='form-check-input' /> Asus&nbsp;&nbsp;&nbsp;
+                            <input checked={selOptions.includes('Lenovo')} onClick={() => {selectOptions('Lenovo')}} type="checkbox" className='form-check-input' /> Lenovo&nbsp;&nbsp;&nbsp;
+                            <input checked={selOptions.includes('Acer')} onClick={() => {selectOptions('Acer')}} type="checkbox" className='form-check-input' /> Acer&nbsp;&nbsp;&nbsp;
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <div className='container'>
+                <div className='row'>
+                    {DisplayData()}
+                </div>
+            </div>
         </div>
-    </div>
-  )
+    )
 }
 
 export default Browse;
