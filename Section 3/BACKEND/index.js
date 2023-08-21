@@ -1,9 +1,14 @@
 // import express
 const express = require('express');
 
+const userRouter = require('./Routers/userRouter');
+
 // initialize express
 const app = express();
 const port = 5000;
+
+// middlewares
+app.use('/user', userRouter);
 
 // Routes
 
