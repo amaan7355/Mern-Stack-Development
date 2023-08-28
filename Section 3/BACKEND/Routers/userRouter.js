@@ -1,33 +1,65 @@
-const express = require('express');
+const express = require("express");
 const Model = require('../models/userModel');
 
 const router = express.Router();
 
-//add
-router.post('/add', (req,res) => {
-    console.log(req.body);
-    res.send('Response from user Router');
-});
+router.post("/add", (req, res) => {
+  console.log(req.body);
 
-//getall
-router.get('/getall', (req,res) => {
-    res.send('Response from user getall');
-});
-
-//getbyemail
-router.get('/getbyemail', (req,res) => {
-    res.send('Response from user getbyemail')
-});
-
-//getbyid
-router.get('/getbyid', (req,res) => {
-    res.send('Response from user getbyid');
-});
-
-//update
-router.get('/update', (req,res) => {
-    res.send('Response from user update');
+  new Model(req.body).save()
+  .then((result) => {
+    res.json(result);
+  })
+  .catch((err) => {
+    console.log(err);
+    res.status(500).json(err);
+  });
+  
 });
 
 
-module.exports = router
+router.get("/getall", (req, res) => {
+  Model.find({})
+  .then((result) => {
+    res.json(result);
+  })
+  .catch((err) => {
+    console.log(err);
+    res.status(500).json(err);
+  });
+});
+
+// : denotes url parameter
+router.get("/getbyemail/:email", (req, res) => {
+    console.log(req.params.email);
+    Model.find( { email : req.params.email } )
+    .then((result) => {
+        res.json(result);
+    }).catch((err) => {
+        console.log(err);
+        res.status(500).json(err);
+    });
+});
+    
+router.get("/getbyid/:id", (req, res) => {
+  console.log(req.params.id);
+  Model.findById(req.params.id)
+  .then((result) => {
+    res.json(result);
+    
+  }).catch((err) => {
+    console.log(err);
+    res.status(500).json(err);
+  });
+});
+
+router.get("/update", (req, res) => {
+  res.send("response from update user Router");
+});
+
+// getall
+// getbyemail
+// getbyid
+// update
+
+module.exports = router;
