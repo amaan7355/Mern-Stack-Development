@@ -1,5 +1,7 @@
 import { useFormik } from 'formik';
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import Swal from 'sweetalert2';
 import * as Yup from 'yup';
 
 const SignupSchema = Yup.object().shape({
@@ -8,6 +10,9 @@ const SignupSchema = Yup.object().shape({
 });
 
 const SignUp = () => {
+
+  const navigate = useNavigate();
+
   // initialize the formik
   const signUpform = useFormik({
     initialValues: {
@@ -15,17 +20,45 @@ const SignUp = () => {
       email : '',
       password : ''
     },
-    onSubmit: (values, {setSubmitting}) => {
+    onSubmit: async (values, {setSubmitting}) => {
       setSubmitting(true);
       setTimeout(() => {
       console.log(values);
       setSubmitting(false);
-    }, 3000)
+    }, 3000);
+
+    // send the data to the server
+    const res = await fetch('http://localhost:5000/user/add', {
+      method: 'POST',
+      body: JSON.stringify(values),
+      headers: {
+        'Content-Type' : 'application/json'
+      }
+    });
+
+    console.log(res.status);
+    if(res.status === 200){
+      Swal.fire({
+        icon: 'success',
+        title: 'Nice',
+        text: 'You have signed up successfully'
+      })
+      .then((result) => {
+        navigate('/login');
+        
+      }).catch((err) => {
+        
+      });
+    }else{
+      Swal.fire({
+        icon: 'error',
+        title: 'oops!!',
+        text: 'Something went wrong'
+      })
+    }
 
   },
     validationSchema: SignupSchema,
-
-    // send the data to the server
   });
   return (
     <div>
