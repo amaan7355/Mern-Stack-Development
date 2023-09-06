@@ -15,11 +15,11 @@ const ContactForm = () => {
             <h4><i class="fa-solid fa-phone mb-2"></i> Call us</h4>
            <p> Mon-Fri from 8am to 5pm... (+995)555-55-55-55</p>
            <h4 className='mb-3'>Social Media</h4>
-           <i class="fa-brands fa-facebook fa-lg icon px-2"></i>
-           <i class="fa-brands fa-instagram fa-lg icon px-2"></i>
-           <i class="fa-brands fa-youtube fa-lg icon px-2"></i>
-           <i class="fa-brands fa-linkedin fa-lg icon px-2"></i>
-           <i class="fa-brands fa-twitter fa-lg icon px-2"></i>
+           <i className="fa-brands fa-facebook fa-lg icon px-2"></i>
+           <i className="fa-brands fa-instagram fa-lg icon px-2"></i>
+           <i className="fa-brands fa-youtube fa-lg icon px-2"></i>
+           <i className="fa-brands fa-linkedin fa-lg icon px-2"></i>
+           <i className="fa-brands fa-twitter fa-lg icon px-2"></i>
           </div>
           <div className='col-md-7 p-5'>
             <form action="">

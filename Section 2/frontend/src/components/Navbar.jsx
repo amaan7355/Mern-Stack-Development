@@ -66,6 +66,11 @@ const Navbar = () => {
                                LaptopList
                             </NavLink>
                         </li>
+                        <li className="nav-item">
+                            <NavLink className="nav-link" to="/manage">
+                               ManageUser
+                            </NavLink>
+                        </li>
                     </ul>
                     <form class="d-flex" role="search">
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>

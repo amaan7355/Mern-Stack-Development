@@ -55,7 +55,7 @@ const Login = () => {
         <div className="card shadow">
           <div className="card-body">
             <form onSubmit={loginForm.handleSubmit}>
-            <img class="logo" src="logo.png" alt=""/>
+            <img className="logo" src="logo.png" alt=""/>
               <h2 className="text-center my-3">Login Here</h2>
 
               <label>Email</label>

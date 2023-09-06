@@ -11,6 +11,7 @@ import Post from './components/Post';
 import ToDo from './components/ToDo';
 import Navbar from './components/Navbar';
 import Browse from './components/Browse';
+import ManageUser from './components/ManageUser';
 
 
 
@@ -29,6 +30,7 @@ function App() {
           <Route element={<Post />} path='/post' />
           <Route element={<ToDo />} path='/todo' />
           <Route element={<Browse />} path='/laptop' />
+          <Route element={<ManageUser />} path='/manage' />
           <Route element={<Notfound />} path='/*' />
         </Routes>
       </BrowserRouter>
