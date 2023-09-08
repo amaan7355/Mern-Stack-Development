@@ -30,6 +30,7 @@ const ManageUser = () => {
               <th>Name</th>
               <th>Email</th>
               <th>Password</th>
+              <th>Action</th>
             </tr>
           </thead>
           <tbody>
@@ -40,6 +41,9 @@ const ManageUser = () => {
                   <td>{user.name}</td>
                   <td>{user.email}</td>
                   <td>{user.password}</td>
+                  <td>
+                    <button className='btn btn-danger'>Delete</button>
+                  </td>
                 </tr>
               })
             }

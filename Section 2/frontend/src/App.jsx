@@ -12,12 +12,14 @@ import ToDo from './components/ToDo';
 import Navbar from './components/Navbar';
 import Browse from './components/Browse';
 import ManageUser from './components/ManageUser';
+import { AnimatePresence } from 'framer-motion';
 
 
 
 function App() {
   return (
     <div>
+      <AnimatePresence >
       <BrowserRouter>
         <Navbar/>
       <Routes>
@@ -34,6 +36,7 @@ function App() {
           <Route element={<Notfound />} path='/*' />
         </Routes>
       </BrowserRouter>
+      </AnimatePresence>
     </div>
   );
 }

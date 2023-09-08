@@ -1,6 +1,7 @@
 import { useFormik } from "formik";
 import React from "react";
 import Swal from "sweetalert2";
+import {motion} from 'framer-motion';
 
 const Login = () => {
   const loginForm = useFormik({
@@ -50,7 +51,13 @@ const Login = () => {
   });
 
   return (
-    <div className="login-body">
+    <motion.div
+      initial={{x: '100%'}}
+      animate={{x: 0}}
+      exit={{x: '-100%'}}
+      transition={{duration: 0.5, stiffness: 100, type: 'spring', damping: 4}}
+
+    className="login-body">
       <div className="col-md-3">
         <div className="card shadow">
           <div className="card-body">
@@ -82,7 +89,7 @@ const Login = () => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
