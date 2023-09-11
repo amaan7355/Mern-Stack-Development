@@ -13,12 +13,14 @@ import Navbar from './components/Navbar';
 import Browse from './components/Browse';
 import ManageUser from './components/ManageUser';
 import { AnimatePresence } from 'framer-motion';
+import { Toaster } from 'react-hot-toast';
 
 
 
 function App() {
   return (
     <div>
+      <Toaster position='top right' />
       <AnimatePresence >
       <BrowserRouter>
         <Navbar/>
