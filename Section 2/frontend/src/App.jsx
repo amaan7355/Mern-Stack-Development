@@ -14,30 +14,38 @@ import Browse from './components/Browse';
 import ManageUser from './components/ManageUser';
 import { AnimatePresence } from 'framer-motion';
 import { Toaster } from 'react-hot-toast';
+import { AppProvider } from './AppContext';
 
 
 
 function App() {
+
+
+
+
+
   return (
     <div>
-      <Toaster position='top right' />
+      <Toaster position='top center' />
       <AnimatePresence >
-      <BrowserRouter>
-        <Navbar/>
-      <Routes>
-          <Route element={<Home />} path='/' />
-          <Route element={<Login />} path='/login' />
-          <Route element={<SignUp />} path='/signup' />
-          <Route element={<ContactForm />} path='/contact' />
-          <Route element={<EventHandling />} path='/event' />
-          <Route element={<StateManagement />} path='/state' />
-          <Route element={<Post />} path='/post' />
-          <Route element={<ToDo />} path='/todo' />
-          <Route element={<Browse />} path='/laptop' />
-          <Route element={<ManageUser />} path='/manage' />
-          <Route element={<Notfound />} path='/*' />
-        </Routes>
-      </BrowserRouter>
+        <BrowserRouter>
+          <AppProvider>
+            <Navbar />
+            <Routes>
+              <Route element={<Home />} path='/' />
+              <Route element={<Login />} path='/login' />
+              <Route element={<SignUp />} path='/signup' />
+              <Route element={<ContactForm />} path='/contact' />
+              <Route element={<EventHandling />} path='/event' />
+              <Route element={<StateManagement />} path='/state' />
+              <Route element={<Post />} path='/post' />
+              <Route element={<ToDo />} path='/todo' />
+              <Route element={<Browse />} path='/laptop' />
+              <Route element={<ManageUser />} path='/manage' />
+              <Route element={<Notfound />} path='/*' />
+            </Routes>
+          </AppProvider>
+        </BrowserRouter>
       </AnimatePresence>
     </div>
   );
