@@ -80,6 +80,11 @@ const Navbar = () => {
                                ManageUser
                             </NavLink>
                         </li>
+                        <li className="nav-item">
+                            <NavLink className="nav-link" to="/products">
+                               App Products
+                            </NavLink>
+                        </li>
                     </ul>
                     <ul className='navbar-nav ms-auto mb-2 mb-lg-0'>
                         {displayUserOption()}

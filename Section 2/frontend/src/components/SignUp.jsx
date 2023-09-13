@@ -61,6 +61,22 @@ const SignUp = () => {
     },
     validationSchema: SignupSchema,
   });
+
+    const uploadFile = async (e) => {
+      if(!e.target.files) return;
+
+      const file = e.target.files[0];
+      console.log(file.name);
+
+      const fd = new FormData();
+      fd.append('myfile', file);
+
+      const res = await fetch('http://localhost:5000/utils/uploadfile', {
+        method: 'POST',
+        body: fd
+      });
+      console.log(res.status);
+    }
   return (
     <motion.div
       initial={{ x: '-100%' }}
@@ -87,12 +103,8 @@ const SignUp = () => {
               <h4>Password <span style={{ color: 'red' }}> <sup>*</sup></span></h4>
             </label>
             <input type="password" name='password' className="input" placeholder="Your Password" onChange={signUpform.handleChange} value={signUpform.values.password} />
+            <input type="file" className='my-3' onChange={uploadFile} />
             <br />
-            <p>
-              <input type="checkbox" required /> I'd like to receive more information about
-              company. I understand and agree to the
-              <mark>Privacy Policy</mark>
-            </p>
             <button disabled={signUpform.isSubmitting} className="mybtn1" type='submit'>
               {
                 signUpform.isSubmitting ? (

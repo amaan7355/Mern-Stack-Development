@@ -15,6 +15,7 @@ import ManageUser from './components/ManageUser';
 import { AnimatePresence } from 'framer-motion';
 import { Toaster } from 'react-hot-toast';
 import { AppProvider } from './AppContext';
+import AppProduct from './components/AppProduct';
 
 
 
@@ -42,6 +43,7 @@ function App() {
               <Route element={<ToDo />} path='/todo' />
               <Route element={<Browse />} path='/laptop' />
               <Route element={<ManageUser />} path='/manage' />
+              <Route element={<AppProduct />} path='/products' />
               <Route element={<Notfound />} path='/*' />
             </Routes>
           </AppProvider>
