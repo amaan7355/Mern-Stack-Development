@@ -20,6 +20,8 @@ app.use('/user', userRouter);
 app.use('/product', productRouter);
 app.use('/utils', utilRouter);
 
+app.use(express.static('./uploads'));
+
 // Routes
 
 app.get('/', (req, res) => {

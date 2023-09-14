@@ -1,14 +1,41 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom';
 import UseAppContext from '../AppContext';
 
 const Navbar = () => {
 
-    const {loggedIn, logout} = UseAppContext();
+    const { loggedIn, logout } = UseAppContext();
+
+    const [currentUser, setCurrentUser] = useState(
+        JSON.parse(sessionStorage.getItem('user'))
+    );
 
     const displayUserOption = () => {
-        if(loggedIn) {
-            return <li className='nav-item'><button className='btn btn-danger' onClick={logout}>Logout</button></li>
+        if (loggedIn) {
+            return ( 
+            <>
+            <li className='nav-item'><button className='btn btn-danger' onClick={logout}>Logout</button></li>
+            <li>
+                <img height={50} className='rounded-circle' src={"http://localhost:5000/" +currentUser.avatar} alt="avatar" />
+            </li>
+            </>
+            )
+        }
+        else{
+            return (
+            <>
+                <li className="nav-item">
+                    <NavLink className="nav-link" to="/login">
+                        Login
+                    </NavLink>
+                </li>
+                <li className="nav-item">
+                    <NavLink className="nav-link" to="/signup">
+                        Signup
+                    </NavLink>
+                </li>
+            </>
+            )
         }
     }
     return (
@@ -32,17 +59,7 @@ const Navbar = () => {
                     <ul className="navbar-nav mx-3 me-auto mb-2 mb-lg-0">
                         <li className="nav-item">
                             <NavLink className="nav-link" to="/">
-                               Home
-                            </NavLink>
-                        </li>
-                        <li className="nav-item">
-                            <NavLink className="nav-link" to="/login">
-                                Login
-                            </NavLink>
-                        </li>
-                        <li className="nav-item">
-                            <NavLink className="nav-link" to="/signup">
-                                Signup
+                                Home
                             </NavLink>
                         </li>
                         <li className="nav-item">
@@ -62,27 +79,27 @@ const Navbar = () => {
                         </li>
                         <li className="nav-item">
                             <NavLink className="nav-link" to="/post">
-                               Facebook Post
+                                Facebook Post
                             </NavLink>
                         </li>
                         <li className="nav-item">
                             <NavLink className="nav-link" to="/todo">
-                               To Do List
+                                To Do List
                             </NavLink>
                         </li>
                         <li className="nav-item">
                             <NavLink className="nav-link" to="/laptop">
-                               LaptopList
+                                LaptopList
                             </NavLink>
                         </li>
                         <li className="nav-item">
                             <NavLink className="nav-link" to="/manage">
-                               ManageUser
+                                ManageUser
                             </NavLink>
                         </li>
                         <li className="nav-item">
                             <NavLink className="nav-link" to="/products">
-                               App Products
+                                App Products
                             </NavLink>
                         </li>
                     </ul>

@@ -1,5 +1,5 @@
 import { useFormik } from 'formik';
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import {motion} from 'framer-motion';
@@ -14,6 +14,8 @@ const SignUp = () => {
 
   const navigate = useNavigate();
 
+  const [selFile, setSelFile] = useState('');
+
   // initialize the formik
   const signUpform = useFormik({
     initialValues: {
@@ -21,8 +23,10 @@ const SignUp = () => {
       email: '',
       password: ''
     },
-    onSubmit: async (values, { setSubmitting }) => {
+    onSubmit: async (values, {setSubmitting })=> {
+      values.avatar = selFile;
       setSubmitting(true);
+
       setTimeout(() => {
         console.log(values);
         setSubmitting(false);
@@ -67,6 +71,7 @@ const SignUp = () => {
 
       const file = e.target.files[0];
       console.log(file.name);
+      setSelFile(file.name);
 
       const fd = new FormData();
       fd.append('myfile', file);

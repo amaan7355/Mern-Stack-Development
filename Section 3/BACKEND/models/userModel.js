@@ -4,7 +4,8 @@
         name : String,
         email : String,
         password : String,
-        age : Number
+        age : Number,
+        avatar: String
     });
 
    module.exports =  model( 'user', mySchema );

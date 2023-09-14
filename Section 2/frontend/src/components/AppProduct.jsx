@@ -1,12 +1,13 @@
 import { useFormik } from 'formik';
-import React from 'react'
+import React from 'react';
 
 const AppProduct = () => {
 
-    const signUpform = useFormik({
+    const Product = useFormik({
         initialValues: {
             title: '',
             category: '',
+            image: '',
             price: '',
             review: '',
             rating: ''
@@ -22,9 +23,9 @@ const AppProduct = () => {
             const res = await fetch('http://localhost:5000/product/add', {
                 method: 'POST',
                 body: JSON.stringify(values),
-                headers: {
-                    'Content-Type': 'application/json'
-                }
+                // headers: {
+                //     'Content-Type': 'application/json'
+                // }
             });
 
         }
@@ -35,21 +36,23 @@ const AppProduct = () => {
             <div className='card'>
                 <h1 className='text-center'>App Products</h1>
                 <div className='card-body'>
-                    <form action="" className=''>
+                    <form onSubmit={Product.handleSubmit}>
                         <h3><label className='mt-3'>Title</label></h3>
-                        <input type="text" className='form-control' />
+                        <input type="text" className='form-control' name='title' onChange={Product.handleChange} value={Product.values.title} />
                         <h3><label className='mt-3'>Category</label></h3>
-                        <input type="text" className='form-control' />
+                        <input type="text" className='form-control' name='category' onChange={Product.handleChange} value={Product.values.category} />
+                        <h3><label className='mt-3'>Image</label></h3>
+                        <input type="text" className='form-control' name='image' onChange={Product.handleChange} value={Product.values.image} />
                         <h3><label className='mt-3'>Price</label></h3>
-                        <input type="text" className='form-control' />
+                        <input type="text" className='form-control' name='price' onChange={Product.handleChange} value={Product.values.price} />
                         <h3><label className='mt-3'>Review</label></h3>
-                        <input type="text" className='form-control' />
+                        <input type="text" className='form-control' name='review' onChange={Product.handleChange} value={Product.values.review} />
                         <h3><label className='mt-3'>Rating</label></h3>
-                        <input type="text" className='form-control' />
+                        <input type="text" className='form-control' name='rating' onChange={Product.handleChange} value={Product.values.rating} />
 
-                        <button className='btn btn-primary mt-5 w-100'>
+                        <button disabled={Product.isSubmitting} className='btn btn-primary mt-5 w-100' type='submit'>
                             {
-                                signUpform.isSubmitting ? (
+                                Product.isSubmitting ? (
                                     <>
                                         <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true" style={{ marginRight: '10px' }}></span>Loading...
                                     </>
