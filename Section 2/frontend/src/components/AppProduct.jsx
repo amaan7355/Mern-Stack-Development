@@ -23,10 +23,12 @@ const AppProduct = () => {
             const res = await fetch('http://localhost:5000/product/add', {
                 method: 'POST',
                 body: JSON.stringify(values),
-                // headers: {
-                //     'Content-Type': 'application/json'
-                // }
+                headers: {
+                    'Content-Type': 'application/json'
+                }
             });
+
+            console.log(res.status);
 
         }
     })

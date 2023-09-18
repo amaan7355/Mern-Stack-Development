@@ -17,6 +17,7 @@ import { Toaster } from 'react-hot-toast';
 import { AppProvider } from './AppContext';
 import AppProduct from './components/AppProduct';
 import UserAuth from './UserAuth';
+import UpdateUser from './components/UpdateUser';
 
 
 
@@ -44,7 +45,8 @@ function App() {
               <Route element={<Post />} path='/post' />
               <Route element={<UserAuth> <ToDo />  </UserAuth> } path='/todo' />
               <Route element={<Browse />} path='/laptop' />
-              <Route element={<UserAuth> <ManageUser /> </UserAuth> } path='/manage' />
+              <Route element={<UserAuth> <ManageUser /> </UserAuth> } path='/manageuser' />
+              <Route element={ <UpdateUser /> } path='/updateuser/:id' />
               <Route element={<AppProduct />} path='/products' />
               <Route element={<Notfound />} path='/*' />
             </Routes>
